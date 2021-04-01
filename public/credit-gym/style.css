@@ -1,0 +1,704 @@
+*{
+	font-family: poppins;
+	margin:0px;
+	padding: 0px;
+	text-decoration: none;
+	list-style: none;
+}
+
+#sidebar-toggle{
+	display: none;
+}
+
+.sidebar{
+	height: 100%;
+	width: 240px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: white;
+	transition: width 500ms;
+	overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar{
+	display: none;
+}
+
+.sidebar-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height:200px;
+	padding: 0rem 1rem;
+}
+
+.sidebar-menu{
+	padding: 1rem;
+}
+
+.sidebar li{
+	margin-bottom: 1.6rem;
+	padding: 10px;
+	text-align: left;
+}
+
+.bggreen {
+    background-color: #799C62;
+    width: 100%;
+    height: auto;
+}
+
+.bggreen p {
+    color: white;
+    padding: 10% 0%;
+    height: auto;
+    margin:0px;
+    margin-left: 5%;
+    font-size: 10px;
+}
+
+.logout{
+	text-align: center;
+}
+
+.logout p a{
+	color: #799C62;
+}
+
+.active,
+.sidebar li:hover{
+	background-color:#799c62;
+	border-radius: 20px;
+	color: white;
+	transition: 500ms;
+}
+
+.sidebar li:hover a{
+	color: white;
+}
+
+.sidebar a{
+	color: black;
+	text-decoration: none;
+}
+
+.active a,
+.sidebar li a:hover{
+	color: white;
+}
+
+.sidebar a span:last-child{
+	padding-left:0.6rem;
+}
+
+#sidebar-toggle:checked ~ .sidebar{
+	width: 60px;
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header img,
+#sidebar-toggle:checked ~ .sidebar li span:last-child{
+	display: none;
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header,
+#sidebar-toggle:checked ~ .sidebar li{
+	display: flex;
+	justify-content: center;
+}
+
+#sidebar-toggle:checked ~ .sidebar > .bggreen{
+	display: none;
+}
+
+
+#sidebar-toggle:checked ~ .main-content{
+	margin-left: 60px;
+}
+
+#sidebar-toggle:checked ~ .main-content header{
+	left: 60px;
+	width: calc(100% - 60px)
+}
+
+.main-content{
+	position: relative;
+	margin-left: 240px;
+	transition: margin-left 500ms;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 240px;
+	width: calc( 100% - 240px);
+	z-index: 100;
+	height: 60px;
+	padding: 0rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	transition: left 500ms;
+}
+
+.searchwrapper{
+	display: flex;
+	align-items: center;
+}
+
+.searchwrapper input{
+	border:none;
+	outline: 0;
+	padding: 1rem;
+	height: 38px;
+}
+
+.social-icons{
+	display: flex;
+	align-items: center;
+}
+
+.uhaveamessage {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: red;
+    position: absolute;
+    top: 10px;
+}
+
+.member{
+	margin: 0px !important;
+}
+
+.social-icons span ,
+.social-icons div{
+	margin-left: 2.2rem;
+}
+
+.social-icons p{
+	margin: 0px;
+	margin-left: 1.2rem;
+}
+
+.social-icons div{
+	height: 40px;
+	width: 40px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image:url(assets/avatar.png);
+	border-radius: 50%;
+}
+
+.fa-bell:before,.fa-envelope:before ,.fa-flag:before {
+    background-color: #9cbf85;
+    color: #0A043C;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+}
+
+main{
+	margin-top:60px;
+	background-color: #FCFCFC;
+	padding: 1rem 4rem;
+	min-height: 100vh; 
+}
+
+.whitebg {
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+}
+/*DashBoard*/
+
+
+.coloredbox {
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.coloredbox span{
+    font-size: 24px;
+    font-family: montserrat;
+    font-weight: 600;
+}
+
+.coloredbox p:nth-child(3){
+    margin-top:10px;
+}
+
+.blue{
+    background-color: #459ED8;
+}
+
+.lightblue{
+  background-color: #22A6AC;
+}
+
+.pink{
+  background-color: #F05179;
+}
+
+.orange{
+  background-color: #F89747;
+}
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+/*My Clients*/
+.fortable1 th,
+.fortable th,
+.fortable1 td,
+.fortable td{
+	vertical-align: middle;
+	border:none;
+	text-align: center;
+}
+
+.fortable1 p,
+.fortable p{
+	margin:0px;
+}
+
+.fa-edit{
+	color: #F89747;
+}
+
+.fa-trash-alt{
+	color:#F26689;
+}
+
+.fortable th{
+	border-left: 2px solid #D51C53;
+}
+
+.fortable1 th{
+	border-left: 2px solid #07A04A;
+}
+
+.approved {
+    color: green;
+    background: rgb(7, 160, 74,0.5);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.inprogress {
+    color: #CB912B;
+    background: rgb(203,145,43,0.5);
+    border-radius: 10px;
+    padding: 5px 0px;
+}
+
+.Month , .Button ,.Day {
+	padding: 10px 20px;
+	border:none;
+	border-radius: 20px;
+}
+
+.colormoney{
+	color: #459ED8;
+}
+
+.colormoney span{
+	color: black;
+}
+/*Affiliates*/
+
+.member p:nth-child(1){
+	color: #459ED8
+}
+
+.member1 p:nth-child(1){
+	color: #22A6AC
+}
+
+
+/*Dispute*/
+.forcolortable,
+tbody.disputetable {
+    background: #6E9159;
+    color: white;
+}
+
+/*Invoices*/
+
+#pagin nav {
+  width: 100%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+}
+
+.paginationli{
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 3px 5px;
+  justify-content: center;
+}
+
+.paginationli li{
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#pagin a {
+  color: black;
+  padding: 3px 8px;
+  text-decoration: none;
+}
+
+.activepage{
+	background-color: #6E9159;
+	padding: 3px 5px;
+}
+
+.next{
+	float: right;
+}
+
+.prev{
+	float: left;
+}
+
+.next, .prev {
+    background-color: #6E9159;
+    color: white !important;
+    border-radius: 10px;
+    padding: 10px 15px !important;
+}
+
+.invoicebuttons {
+	background-color: rgb(112, 112, 112,0.2);
+	border-radius: 10px;
+	width: fit-content;
+	border-radius: 10px;
+}
+
+.invoicebuttons button{
+	padding: 5px 20px;
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+/*.invoicebuttons button::after{
+	content: '|';
+  height: 100%;
+  width: 1px;
+  margin-left: 1rem;
+  color: #626679;	
+}*/
+
+.select{
+	float: right;
+}
+
+option{
+	background-color:#6E9159;
+}
+
+.select select{
+	border:none;
+	background-color:#6E9159;
+	padding: 5px 15px;
+    color: white;
+}
+.activeinvoice{
+	background-color:#6E9159 !important;
+	color: white;
+	border-radius: 10px;
+
+}
+
+.fortableinvoice{
+	color: #626679;
+	text-align: center;
+}
+
+.fortableinvoice th{
+	text-align: center;
+}
+
+
+
+.fortableinvoice td , .fortableinvoice th{
+	border:none;
+	vertical-align: middle;
+}
+
+.fortableinvoice i{
+	color: #6E9159;
+}
+
+.nameandimage{
+	display: flex;
+	justify-content: center;
+}
+
+.nameandimage img{
+	margin-right: 5px;
+	width: 75%;
+	height: 100%;
+}
+
+.nameandimage p{
+	text-align: left;
+	margin: 0px;
+}
+
+.differentcolors1{
+	color: #459ED8;
+}
+
+.differentcolors2{
+	color:#F05179
+}
+
+.tag{
+	color: green;
+    background: rgb(7, 160, 74,0.3);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.tag1{
+	color: #CB912B;
+    background: rgb(203,145,43,0.3);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+/*Forms in a different file*/
+
+
+/*Calendar*/
+
+.forwhitecolor{
+	background: white;
+	padding: 1rem;
+	border-radius: 15px;
+}
+
+.calendar th{
+	padding: 10px 15px;
+}
+
+.calendar td{
+	text-align: center;
+	padding: 15px;	
+}
+
+.calendar td:hover{
+	background-color: #9cbf85;
+	color: white;
+	border-radius: 15px;
+	cursor: pointer;	
+}
+
+.calendaractive{
+	background-color: 
+}
+
+.calendarpics img:nth-child(3){
+	margin-top: 1px;
+}
+
+.forgettingshadow{
+	box-shadow: 0px 5px 25px grey;
+	margin: 10px auto;
+}
+
+.forgettingshadow p{
+	margin: 0px;
+}
+
+
+.dateactive{
+	background-color: #9cbf85;
+	color: white;
+	border-radius: 15px;
+}
+
+
+
+@media only screen and (max-width: 1200px){
+
+	.sidebar{
+		width: 60px;
+		z-index: 150;
+	}
+
+    .sidebar .sidebar-header img,
+	.sidebar li span:last-child{
+		display: none;
+	}
+
+	.sidebar .sidebar-header,
+	.sidebar li{
+		display: flex;
+		justify-content: center;
+	}
+
+	.sidebar > .bggreen{
+		display: none;
+	}
+
+
+	.main-content{
+		margin-left: 60px;
+	}
+
+	.main-content header{
+		left: 60px;
+		width: calc(100% - 60px)
+	}
+
+
+
+	#sidebar-toggle:checked ~ .sidebar{
+	width: 240px;
+	}
+
+	#sidebar-toggle:checked ~ .sidebar > .bggreen{
+	  display: block;
+	}
+
+	#sidebar-toggle:checked ~ .sidebar .sidebar-header img,
+	#sidebar-toggle:checked ~ .sidebar li span:last-child{
+		display: inline;
+	}
+
+	#sidebar-toggle:checked ~ .sidebar .sidebar-header{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#sidebar-toggle:checked ~ .sidebar li{
+		display: block;
+	}
+
+
+	#sidebar-toggle:checked ~ .main-content{
+		margin-left: 60px;
+	}
+
+	#sidebar-toggle:checked ~ .main-content header{
+		left: 60px;
+	}
+
+
+}
+
+@media only screen and (max-width: 768px)
+	
+	{
+	.nameandimage img{
+		width: 200%;
+	}
+
+	.invoicebuttons {
+	    background-color: transparent;
+	}
+	.tag {
+    color: green;
+     background:transparent; 
+     border-radius: 0px; 
+     padding: 0px; 
+	}
+	.tag1 {
+    color: orange;
+     background:transparent; 
+     border-radius: 0px; 
+     padding: 0px; 
+	}
+
+}
+
+@media only screen and (max-width: 425px){
+	main{
+		text-align: center;
+		padding: 1rem;
+	}
+	.Month, .Button, .Day {
+    	padding: 5px 12px;
+	}
+	.inprogress {
+	    padding: 6px 20px;
+	}
+	.approved {
+		 padding: 15px 15px;
+	}	
+	.select{
+		float: none;
+		margin-top: 10%;
+	}
+	#pagin a {
+    	font-size: 10px;
+    	padding: 3px;
+	}
+	.paginationli li {
+    	padding: 5px;
+	}
+	.next, .prev {
+    	padding: 5px 10px !important;
+	}
+	.fortableinvoice td, .fortableinvoice th {
+    	padding: 0px;
+	}
+	.fortableinvoice{
+		font-size: 10px;
+	}
+	.nameandimage p{
+		text-align: center;
+	}
+	.nameandimage img{
+		display: none;
+	}
+	.social-icons span, .social-icons div {
+    	margin-left: 1.1rem;
+	}
+	.social-icons p {
+        font-size: 10px;
+	}
+	.searchwrapper {
+    	display: none;
+	}
+	#progressbar li strong {
+    	font-size: 10px;
+	}
+	.invoicebuttons {
+    	background-color: transparent;
+ 	}
+ 	.calendar th {
+    	padding: 0px 4px;
+    	font-size: 10px;
+	}
+	.calendar td {
+    	padding: 0px;
+	}
+
+}
+
+
+
+@media only screen and (max-width: 320px){
+
+		.fortableinvoice td, .fortableinvoice th {
+		    padding: 4px 2px;
+		}
+		.social-icons span, .social-icons div {
+		    margin-left: 0.5rem;
+		}
+
+	}

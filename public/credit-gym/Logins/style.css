@@ -1,0 +1,159 @@
+body{
+	background-color: #FCFCFC;
+	margin:0px;
+	padding: 0px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+
+
+.formlogin{
+	position: relative;
+	background-color: white;
+	padding: 50px;
+	border-radius: 40px;
+}
+
+.group{ 
+  position:relative; 
+  margin-bottom:20px; 
+}
+
+.group input{
+    padding: 36px 50px 20px 75px;
+    font-size: 16px;
+    border: 1px solid #C0C0C0;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 11px 1px #eff1f9;
+    -moz-box-shadow: 1px 1px 11px 1px #EFF1F9;
+    box-shadow: 1px 1px 11px 1px #eff1f9;
+}
+
+.group label {
+    position: absolute;
+    left: 6%;
+    top: 5%;
+    border: none;
+}
+
+.group i {
+    position: absolute;
+    left: 6%;
+    top: 48%;
+    font-size: 22px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.remember{
+	float: left;
+}
+
+.forgot{
+	float: right;
+}
+
+.color span a , .forgot a{
+	color: #799C62;
+}
+
+.whitebtn {
+    background: #F6F5FA;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.greenbtn {
+    background: #799C62;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    color: white;
+}
+.loginsocialf{
+	background-color: white;
+    position: absolute;
+    top: 18%;
+    right: -46px;
+    width: 60px;
+    height: 40px;
+}
+
+.fa-facebook-square:before {
+    content: "\f082";
+    color: #4867aa;
+    font-size: 35px;
+}
+
+.loginsocialg {
+    position: absolute;
+    top: 11%;
+    right: -36px;
+    background: white;
+    width: 50px;
+    height: 35px;
+}
+
+.onsmaller{
+    display: none;
+}
+
+.onsmaller img{
+    width: 100px;
+}
+
+.onsmaller .fb{
+    margin: auto 0px;
+    background-color: #4867aa;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.onsmaller .fb a{
+    color: white;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1024px){
+    .fornone{
+        display: none;
+    }
+    .onsmaller{
+        display:block;
+        margin-top: 30px;
+    }
+    
+    .onsmaller p {
+        color: #799C62;
+    }
+    .onsmaller .flexing{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+    }
+}
+
+
+
+@media only screen and (max-width: 425px) { 
+		.remember{
+		float: none;
+	}
+
+	.forgot{
+		float: none;
+	}
+	.formlogin {
+	    padding: 10px;
+	}
+}
+
+

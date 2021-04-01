@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Credit Gym</title>
+  <link rel="icon" href="assets/logo.png" type ="image/x-icon">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="links/FontAwesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+	<input type="checkbox" id="sidebar-toggle">
+	<div class="sidebar">
+		<label for="sidebar-toggle" class="fas fa-bars" style="cursor: pointer; padding: 1rem"></label>
+		<div class="sidebar-header">
+			<img width="100%" src="assets/logo.png">
+		</div>
+		<hr style="border:1px solid black">
+	<div class="sidebar-menu">
+		   <ul>
+		      <a href="index.html">
+		         <li>
+		            <span class="fas fa-grip-horizontal fa-fw"></span>
+		            <span>Dashboard</span>
+		         </li>
+		      </a>
+		      <a href="myclient.html">
+		         <li> 
+		            <span class="fas fa-male fa-fw"></span>
+		            <span>My Clients</span>
+		         </li>
+		      </a>
+		      <a href="charts.html">
+		         <li>
+		            <span class="fas fa-chart-pie fa-fw"></span>
+		            <span>Charts</span>
+		         </li>
+		      </a>
+		      <a href="forms.html">
+		         <li>
+		            <span class="fab fa-wpforms fa-fw"></span>
+		            <span>Forms</span>
+		         </li>
+		      </a>
+		      <a href="dispute.html">
+		         <li>
+		            <span class="far fa-envelope-open fa-fw"></span>
+		            <span>Dispute Letters</span>
+		         </li>
+		      </a>
+		      <a href="calendar.html">
+		         <li>
+		            <span class="far fa-calendar-alt fa-fw"></span>
+		            <span>Calendar</span>
+		         </li>
+		      </a>
+		      <a href="affiliates.html">
+		         <li>
+		            <span class="fas fa-network-wired fa-fw"></span>
+		            <span>My Affiliates</span>
+		         </li>
+		      </a>
+		      <a href="invoices.html">
+		         <li  class="active">
+		            <span class="fas fa-file-invoice fa-fw"></span>
+		            <span>My Invoices</span>
+		         </li>
+		      </a>
+		   </ul>
+		</div>
+		
+		<div class="logout mt-5 mb-4 pt-5">
+                <p><a href="#"><i class="fas fa-sign-out-alt pr-2"></i> Logout </a></p>
+            </div>
+
+            <div class="bggreen">
+                <p>Copyrights C 2021 , The Credit Gym. <br> All rights reserved</p>
+            </div>
+	</div>
+
+	<div class="main-content">
+
+		<header class="centering">
+			<div class="searchwrapper">
+				<span class="fas fa-search"></span>
+				<input type="Search" name="Search" placeholder="Search">
+			</div>
+			<div class="social-icons">
+				<span class="uhaveamessage"></span>
+				<span class="fas fa-bell fa-fw"></span>
+				<span class="fa fa-envelope fa-fw"></span>
+				<span class="fa fa-flag fa-fw mr-1"></span>
+				<div></div>
+				<p>Mujtaba Kareem <br><span class="member font-weight-bold"> Member </span></p>
+			</div>
+		</header>
+
+		<main style="background-color:white;">
+			<div class="row">
+				<div class="col-lg-6 col-sm-8 col-12">
+					<div class="invoicebuttons" id="myDIV">
+						<button class="btn activeinvoice">All</button>
+						<button class="btn">Files</button>
+						<button class="btn">Images</button>
+						<button class="btn">Videos</button>
+						<button class="btn">Archives</button>
+					</div>
+				</div>
+				<div class="col-lg-6 col-sm-4 col-12">
+
+					<div class="select">
+						<i class="fas fa-filter"></i>
+						<select>
+							<option>Ascending</option>
+							<option>Descending</option>
+							<option>Date</option>
+							<option>Title</option>
+						</select>
+					</div>
+					
+				</div>
+			</div>
+
+			<section>
+
+			  <div class="content">
+
+			  <div class="table-responsive">
+			  <table class="table mt-5">
+			    <tbody>
+			      <tr class="fortableinvoice">
+			        <th><span class="fas fa-sort-alpha-down"> Invoice</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Date</span></th>
+			        <th colspan="2"><span class="fas fa-sort-alpha-down"> Name</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Price</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Tag</span></th>
+			        <th></th>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors1">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag1">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors1">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag1">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors1">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			    </tbody>
+			  </table>
+			  </div>
+
+			  </div>
+
+			  <div class="content">
+			    <div class="table-responsive">
+			  <table class="table mt-5">
+			    <tbody>
+			      <tr class="fortableinvoice">
+			        <th><span class="fas fa-sort-alpha-down"> Invoice</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Date</span></th>
+			        <th colspan="2"><span class="fas fa-sort-alpha-down"> Name</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Price</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Tag</span></th>
+			        <th></th>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors1">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag1">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			    </tbody>
+			  </table>
+			  </div>
+			  </div>
+
+			  <div class="content">
+			    <div class="table-responsive">
+			  <table class="table mt-5">
+			    <tbody>
+			      <tr class="fortableinvoice">
+			        <th><span class="fas fa-sort-alpha-down"> Invoice</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Date</span></th>
+			        <th colspan="2"><span class="fas fa-sort-alpha-down"> Name</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Price</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Tag</span></th>
+			        <th></th>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag1">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors1">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors1">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			    </tbody>
+			  </table>
+			  </div>
+			  </div>
+
+			  <div class="content">
+			    <div class="table-responsive">
+			  <table class="table mt-5">
+			    <tbody>
+			      <tr class="fortableinvoice">
+			        <th><span class="fas fa-sort-alpha-down"> Invoice</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Date</span></th>
+			        <th colspan="2"><span class="fas fa-sort-alpha-down"> Name</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Price</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Tag</span></th>
+			        <th></th>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors1">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag1">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			    </tbody>
+			  </table>
+			  </div>
+			  </div>
+
+			  <div class="content">
+			  <div class="table-responsive">
+			  <table class="table mt-5">
+			    <tbody>
+
+			      <tr class="fortableinvoice">
+			        <th><span class="fas fa-sort-alpha-down"> Invoice</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Date</span></th>
+			        <th colspan="2"><span class="fas fa-sort-alpha-down"> Name</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Price</span></th>
+			        <th><span class="fas fa-sort-alpha-down"> Tag</span></th>
+			        <th></th>
+			      </tr>
+
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag1">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors1">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors2">$185</td>
+			    	<td><span class="tag1">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			      <tr class="fortableinvoice">
+			        <th scope="row"><i class="far fa-clone pr-2"></i><span>AB-01-12-3456</span></th>
+			        <td>04 Aug 2020</td>
+			        <td class="nameandimage"><img src="assets/grey.png"></td>
+			    	<td><p>Nichole Perkins<br><span class="font-weight-bold text-left"> Company </span></p></td>
+			    	<td class="differentcolors1">$185</td>
+			    	<td><span class="tag">Lorem Ipsum</span></td>
+			    	<td><i class="fas fa-ellipsis-h"></i></td>
+			      </tr>
+			    </tbody>
+			  </table>
+			  </div>
+			  </div>
+
+
+			  <article id="pagin" class="mt-3">
+			    <div class="row">
+			    	<div class="col-lg-3 col-3 m-auto"><span><a class="prev" href="#"> < PREV </a></span></div>
+			      	<div class="col-lg-6 col-6 m-auto">
+			      		<ul class="paginationli">
+					      <li class="activepage"><a href="#">1</a></li>
+					      <li><a href="#">2</a></li>
+					      <li><a href="#">3</a></li>
+					      <li><a href="#">4</a></li>
+					      <li><a href="#">5</a></li>
+					    </ul>
+			      	</div>
+			      	<div class="col-lg-3 col-3 m-auto"><span><a class="next" href="#"> NEXT > </a></span></div>
+			    </div>
+			  </article>
+
+			</section>
+		</main>
+		
+	</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+	var nombrePage = $(".content").length;
+
+showPage = function(pagination) {
+  if (pagination < 0 || pagination >= nombrePage) return;
+
+	  $(".content").hide().eq(pagination).show();
+	  $("#pagin li").removeClass("activepage").eq(pagination).addClass("activepage");
+	}
+
+	// Go to Left
+	$(".prev").click(function() {
+	  showPage($("#pagin ul .activepage").index() - 1);
+	});
+
+	// Go to Right
+	$(".next").click(function() {
+	  showPage($("#pagin ul .activepage").index() + 1);
+	});
+
+	$("#pagin ul a").click(function(e) {
+	  e.preventDefault();
+	  showPage($(this).parent().index());
+	});
+
+	showPage(0)
+</script>
+
+<script>
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("activeinvoice");
+  current[0].className = current[0].className.replace("activeinvoice", "");
+  this.className += " activeinvoice";
+  });
+}
+</script>
+</body>
+
+</html>
